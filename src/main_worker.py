@@ -12,7 +12,7 @@ import yaml
 
 import sed_eval
 import dcase_util
-from tqdm import tqdm
+from tqdm.notebook import tqdm
 
 def get_train_val_data_loaders(config):
     df = pd.read_csv(config["meta_path"])
@@ -243,5 +243,5 @@ def evaluate_test(model_path):
 
 
 
-if __name__=="__main__":
-    evaluate_test("../models/model0010.pt")
+#if __name__=="__main__":
+#    evaluate_test("../models/model0010.pt")
