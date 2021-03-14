@@ -1,0 +1,19 @@
+meta_path : '../data/DESED/eval/dataset/metadata/eval/public.tsv'
+audio_path : "../data/DESED/eval/dataset/audio/eval/public/"
+max_frames : 500
+eval_frames: 0
+batch_size : 1
+lr: 0.001
+threads : 1
+sample_rate: 16000
+classes : ["pouring_water", "vacuum_cleaner", "dog", "cat", "background"]
+
+classes_desed:  ["Running_water",  "Vacuum_cleaner" , "Dog", "Cat" ] 
+
+threshold: 0.5
+iou_thr: 0.25
+
+melfb:
+  hop_len: 360
+  win_length: 1024
+  n_fft: 1024

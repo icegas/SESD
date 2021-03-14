@@ -1,0 +1,31 @@
+meta_path : '../data/ESC-50-master/meta/esc50.csv'
+audio_path : "../data/ESC-50-master/audio/"
+max_frames : 500
+batch_size : 64
+lr: 0.001
+threads : 4
+classes : ["pouring_water", "vacuum_cleaner", "dog", "cat", "background"]
+epochs : 50
+sample_rate: 16000
+
+threshold: 0.5
+iou_thr: 0.25
+
+savepath: "../models/model"
+
+train_generator:
+  gen_samples: 1024
+  min_frame_size: 25
+  max_frame_size: 115
+
+val_generator:
+  gen_samples: 256
+  min_frame_size: 25
+  max_frame_size: 115
+
+melfb:
+  hop_len: 360
+  win_length: 1024
+  n_fft: 1024
+
+SEED: 15415413
